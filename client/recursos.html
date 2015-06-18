@@ -1,0 +1,24 @@
+<template name="recursos">
+  <h1>Recursos</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Descricao</th>
+        <th>Situação</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each recursos}}
+        {{>recurso}}
+      {{/each}}
+    </tbody>
+  </table>
+  {{>cadastrorecurso}}
+</template>
+
+<template name="recurso">
+  <tr>
+    <td>{{descricao}}</td>
+    <td>{{situacao}}</td>
+  </tr>
+</template>

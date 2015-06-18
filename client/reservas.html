@@ -1,0 +1,23 @@
+<template name="reservas">
+  <h1>Reservas</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>DataInicio</th>
+        <th>Situação</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each reservas}}
+        {{>reserva}}
+      {{/each}}
+    </tbody>
+  </table>
+</template>
+
+<template name="reserva">
+  <tr>
+    <td>{{descricao}}</td>
+    <td>{{situacao}}</td>
+  </tr>
+</template>

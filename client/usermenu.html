@@ -1,0 +1,44 @@
+<template name="usermenu">
+  {{#if currentUser}}
+  <div id="navbar" class="collapse navbar-collapse" style="float:right;">
+  <ul class="nav navbar-nav container-fluid">
+    {{#if temNivel Nivel.ADMINISTRADOR }}
+      {{#if paginaAtual "/usuarios"}}
+      <li class="active">
+        <a href="/usuarios" class="bt_usuarios">Usuarios</a>
+      </li>
+      {{else}}
+      <li>
+        <a href="/usuarios" class="bt_usuarios">Usuarios</a>
+      </li>
+      {{/if}}
+    {{/if}}
+    {{#if temNivel Nivel.GERENTE }}
+      {{#if paginaAtual "/recursos"}}
+      <li class="active"  >
+        <a href="/recursos" class="bt_recursos">Recursos</a>
+      </li>
+      {{else}}
+      <li>
+        <a href="/recursos" class="bt_recursos">Recursos</a>
+      </li>
+      {{/if}}
+    {{/if}}
+    {{#if paginaAtual "/reservas"}}
+    <li class="active"  >
+      <a href="/reservas" class="bt_reservas">Reservas</a>
+    </li>
+    {{else}}
+    <li>
+      <a href="/reservas" class="bt_reservas">Reservas</a>
+    </li>
+    {{/if}}
+    <li style="width:100px;">&nbsp;</li>
+    <li><div class="navbar-nome">Olá, {{currentUser.profile.nome}}!</div></li>
+    <li><!--<img src="/images/user1.png" class="img-thumbnail" height="45" width="45" style="margin:2px">--></li>
+    <li><a href class="sair">Sair</a></li>
+  </ul>
+  
+  </div><!--/.nav-collapse -->
+  {{/if}}
+</template>

@@ -1,0 +1,29 @@
+<template name="usuarios">
+	<h1>Usuarios</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Matricula</th>
+				<th>Nome</th>
+				<th>Prioridade</th>
+				<th>Nivel</th>
+				<th>Ações</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each usuarios}}
+				{{>usuario}}
+			{{/each}}
+		</tbody>
+	</table>
+	{{>cadastrousuario}}
+</template>
+<template name="usuario">
+	<tr>
+		<td>{{profile.email}}</td>
+		<td>{{profile.nome}}</td>
+		<td>{{profile.prioridade}}</td>
+		<td>{{profile.nivel}}</td>
+		<td>editar</td>
+	</tr>
+</template>
