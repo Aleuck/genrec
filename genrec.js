@@ -29,7 +29,10 @@ Router.route('/usuarios', function () {
 Nivel = {
   ADMINISTRADOR: 1,
   GERENTE: 2,
-  USUARIO: 3
+  USUARIO: 3,
+  '1': 'ADMINISTRADOR',
+  '2': 'GERENTE',
+  '3': 'USUARIO'
 };
 
 Prioridade = {
@@ -50,6 +53,11 @@ Pagina = {
   RECURSOS: 2,
   USUARIOS: 3
 };
+Lang = {
+  nivel: function (nivel) {
+    return Nivel[nivel];
+  }
+}
 
 if (Meteor.isClient) {
   Usuarios = new Mongo.Collection('usuarios');
@@ -68,6 +76,9 @@ if (Meteor.isClient) {
   });
   Template.registerHelper("Pagina", function () {
     return Pagina;
+  });
+  Template.registerHelper("Lang", function () {
+    return Lang;
   });
 }
 
