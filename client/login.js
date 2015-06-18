@@ -5,6 +5,8 @@ Template.login.events({
       event.target.senha.value, 
       function (err) {
         console.log(err);
+        alert(err.reason);
+        event.target.reset();
       });
     return false;
   }
