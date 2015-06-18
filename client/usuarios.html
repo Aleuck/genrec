@@ -20,10 +20,13 @@
 </template>
 <template name="usuario">
 	<tr>
-		<td>{{profile.email}}</td>
+		<td>{{username}}</td>
 		<td>{{profile.nome}}</td>
-		<td>{{profile.prioridade}}</td>
-		<td>{{profile.nivel}}</td>
-		<td>editar</td>
+		<td>{{Lang.prioridade profile.prioridade}}</td>
+		<td>{{Lang.nivel profile.nivel}}</td>
+		<td>
+			<button class="edit"><span class="fontawesome-pencil"></span></button>
+			<button class="delete"><span class="fontawesome-trash"></span></button>
+		</td>
 	</tr>
 </template>

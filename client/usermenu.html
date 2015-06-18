@@ -1,7 +1,7 @@
 <template name="usermenu">
   {{#if currentUser}}
-  <div id="navbar" class="collapse navbar-collapse" style="float:right;">
-  <ul class="nav navbar-nav container-fluid">
+  <div id="navbar" class="collapse navbar-collapse">
+  <ul class="nav navbar-nav navbar-right">
     {{#if temNivel Nivel.ADMINISTRADOR }}
       {{#if paginaAtual "/usuarios"}}
       <li class="active">
@@ -35,7 +35,6 @@
     {{/if}}
     <li style="width:100px;">&nbsp;</li>
     <li><div class="navbar-nome">Olá, {{currentUser.profile.nome}}!</div></li>
-    <li><!--<img src="/images/user1.png" class="img-thumbnail" height="45" width="45" style="margin:2px">--></li>
     <li><a href class="sair">Sair</a></li>
   </ul>
   

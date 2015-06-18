@@ -332,7 +332,7 @@ div.sys_navigation ul li a:hover, div#menu ul li a:hover, #navigation li a:hover
 .centering {
   float:none;
   margin:0 auto;
-  padding: 4em 0 0;
+  padding: 50px 0 10px;
 }
 
 .input-box{
@@ -389,10 +389,11 @@ table tbody td{
   padding:6px;
   text-align:center;
   color:#333;
+  background-color:rgba(245,225,204,0.3);
 }
 
 table tbody tr:nth-child(odd) td{
-  background-color:#ffffcc;
+  background-color:rgba(255,255,204,0.5);
 }
 
 table tbody tr.hover td{

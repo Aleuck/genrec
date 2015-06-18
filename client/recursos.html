@@ -3,8 +3,10 @@
   <table>
     <thead>
       <tr>
+        <th>Codigo</th>
         <th>Descricao</th>
         <th>Situação</th>
+        <th>Ações</th>
       </tr>
     </thead>
     <tbody>
@@ -18,7 +20,13 @@
 
 <template name="recurso">
   <tr>
+    <td>{{codigo}}</td>
     <td>{{descricao}}</td>
     <td>{{situacao}}</td>
+    <td>{{situacao}}</td>
+    <td>
+      <button class="edit"><span class="fontawesome-pencil"></span></button>
+      <button class="delete"><span class="fontawesome-trash"></span></button>
+    </td>
   </tr>
 </template>

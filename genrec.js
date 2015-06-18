@@ -30,16 +30,20 @@ Nivel = {
   ADMINISTRADOR: 1,
   GERENTE: 2,
   USUARIO: 3,
-  '1': 'ADMINISTRADOR',
-  '2': 'GERENTE',
-  '3': 'USUARIO'
+  '1': 'Administrador',
+  '2': 'Gerente',
+  '3': 'Usuário'
 };
 
 Prioridade = {
   PREFEITO: 1,
   SECRETARIO: 2,
   FUNCIONARIO: 3,
-  MAL_FUNCIONARIO: 4
+  MAL_FUNCIONARIO: 4,
+  '1': 'Prefeito',
+  '2': 'Secretario',
+  '3': 'Funcionario',
+  '4': 'Mal Funcionário'
 };
 
 Situacao = {
@@ -56,6 +60,9 @@ Pagina = {
 Lang = {
   nivel: function (nivel) {
     return Nivel[nivel];
+  },
+  prioridade: function (prioridade) {
+    return Prioridade[prioridade];
   }
 }
 
